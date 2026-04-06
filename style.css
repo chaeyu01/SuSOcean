@@ -1,10 +1,11 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: #f8f9fb;
+    background: #f5f7fa;
+    color: #222;
 }
 
-/* 네비 */
+/* NAV */
 nav {
     position: fixed;
     top: 0;
@@ -12,39 +13,41 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 16px;
     background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(8px);
     z-index: 1000;
 }
 
 .logo {
     position: absolute;
-    left: 20px;
+    left: 25px;
 }
 
 .logo img {
     height: 45px;
 }
 
-/* 메뉴 */
+/* MENU */
 .menu {
     display: flex;
-    gap: 30px;
+    gap: 35px;
 }
 
 .menu a {
     color: white;
     text-decoration: none;
+    font-weight: 500;
     position: relative;
-    padding: 5px 8px;
+    transition: 0.3s;
 }
 
-/* hover 애니메이션 */
+/* underline animation */
 .menu a::after {
     content:"";
     position:absolute;
     left:0;
-    bottom:-5px;
+    bottom:-6px;
     width:0;
     height:2px;
     background:#00c3ff;
@@ -55,7 +58,7 @@ nav {
     width:100%;
 }
 
-/* CV 버튼 */
+/* CV 강조 */
 .cv-btn {
     background:#00c3ff;
     padding:6px 14px;
@@ -71,21 +74,28 @@ nav {
     justify-content:center;
 }
 
-/* 텍스트 */
 .overlay {
-    background:rgba(255,255,255,0.65);
-    padding:40px;
+    background:rgba(255,255,255,0.7);
+    padding:45px;
     border-radius:12px;
     text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
 
-/* 섹션 */
+.overlay h1 {
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+/* SECTION */
 section {
     padding:120px 20px 80px;
     text-align:center;
+    max-width:1200px;
+    margin:auto;
 }
 
-/* 카드 */
+/* CARD GRID */
 .cards {
     display:flex;
     justify-content:center;
@@ -93,29 +103,30 @@ section {
     flex-wrap:wrap;
 }
 
+/* CARD */
 .card {
     width:280px;
     padding:20px;
-    border-radius:12px;
+    border-radius:14px;
     background:white;
-    box-shadow:0 8px 25px rgba(0,0,0,0.1);
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
     transition:0.3s;
-    overflow:hidden; /* 🔥 이미지 넘침 방지 */
+    overflow:hidden;
 }
 
 .card:hover {
     transform:translateY(-8px);
 }
 
-/* 이미지 */
+/* IMAGE */
 .card img {
     width:100%;
     height:220px;
-    object-fit:cover;  /* 🔥 핵심 (삐져나옴 해결) */
+    object-fit:cover;
     border-radius:10px;
 }
 
-/* 스크롤 애니메이션 */
+/* SCROLL ANIMATION */
 .reveal {
     opacity:0;
     transform:translateY(40px);
