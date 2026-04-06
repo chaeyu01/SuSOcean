@@ -1,80 +1,12 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-/* 네비게이션 */
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 40px;
-    background: rgba(0,0,0,0.6);
-    color: white;
-    z-index: 1000;
-}
-
-.logo {
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.menu a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: bold;
-}
-
-.menu a:hover {
-    border-bottom: 2px solid white;
-}
-
-/* 히어로 (메인 이미지) */
-.hero {
-    height: 100vh;
-    background: url('hero.png') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* 텍스트 오버레이 */
 .overlay {
     text-align: center;
     color: black;
-    background: rgba(255,255,255,0.6);
-    padding: 30px;
+    background: rgba(255,255,255,0.3);
+    padding: 20px 30px;
     border-radius: 10px;
 }
 
 .overlay h1 {
-    font-size: 40px;
-}
-
-.overlay p {
-    font-size: 18px;
-}
-
-/* 공통 섹션 */
-section {
-    padding: 100px 20px;
-    text-align: center;
-}
-
-/* 카드 */
-.cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.card {
-    width: 250px;
-    padding: 20px;
-    border-radius: 10px;
-    background: #f4f4f4;
+    font-size: 50px;
+    margin: 0;
 }
