@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <title>Members</title>
@@ -22,11 +22,13 @@
 <a href="./members.html">Members</a>
 <a href="./seminar.html">Seminar</a>
 <a href="./publications.html">Publications</a>
+<a href="./cv.html" class="cv-btn">CV</a>
 </div>
 </nav>
 
-<section>
-<h2>Professor</h2>
+<!-- 교수 -->
+<section class="reveal">
+<h2>SuSOcean Professors</h2>
 
 <div class="cards">
 
@@ -34,14 +36,32 @@
 <img src="./professor.jpg">
 <h3>Min Ook Kim</h3>
 <p>SeoulTech</p>
-<p>Eco-friendly composite materials & structural durability</p>
+<p>Composite materials & durability</p>
+</div>
+
+<div class="card">
+<h3>Zhiyu Jiang</h3>
+<p>University of Agder</p>
+<p>Offshore structures</p>
+</div>
+
+<div class="card">
+<h3>OsloMet Professors</h3>
+<p>Oslo Metropolitan University</p>
+<p>Ocean infrastructure</p>
+</div>
+
+<div class="card">
+<h3>SNU Professors</h3>
+<p>Seoul National University</p>
+<p>Structural engineering</p>
 </div>
 
 </div>
-
 </section>
 
-<section>
+<!-- 멤버 -->
+<section class="reveal">
 <h2>Members</h2>
 
 <div class="cards">
@@ -52,8 +72,13 @@
 </div>
 
 <div class="card">
-<h3>Norway Lab</h3>
+<h3>OsloMet Lab</h3>
 <p>Hansen, Olsen, Larsen</p>
+</div>
+
+<div class="card">
+<h3>UiA Lab</h3>
+<p>Johansen, Nilsen</p>
 </div>
 
 <div class="card">
@@ -62,8 +87,18 @@
 </div>
 
 </div>
-
 </section>
+
+<script>
+window.addEventListener('scroll', function() {
+    const reveals = document.querySelectorAll('.reveal');
+    reveals.forEach(el => {
+        if(el.getBoundingClientRect().top < window.innerHeight - 100){
+            el.classList.add('active');
+        }
+    });
+});
+</script>
 
 </body>
 </html>
