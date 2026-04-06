@@ -28,41 +28,51 @@
 
 <!-- 교수 -->
 <section class="reveal">
-<h2>SuSOcean Professors</h2>
+<h2>SuSOcean Academic Leaders</h2>
 
 <div class="cards">
 
 <div class="card">
 <img src="./professor.jpg">
 <h3>Min Ook Kim</h3>
-<p>SeoulTech</p>
-<p>Composite materials & durability</p>
+<p>Seoul National University of Science and Technology</p>
+<p>
+Eco-friendly composite materials, FRP systems, and 
+durability of marine concrete structures.
+</p>
 </div>
 
 <div class="card">
 <h3>Zhiyu Jiang</h3>
 <p>University of Agder</p>
-<p>Offshore structures</p>
+<p>
+Offshore structures, marine engineering, and 
+structural reliability.
+</p>
 </div>
 
 <div class="card">
-<h3>OsloMet Professors</h3>
+<h3>OsloMet Faculty</h3>
 <p>Oslo Metropolitan University</p>
-<p>Ocean infrastructure</p>
+<p>
+Sustainable infrastructure and ocean engineering education.
+</p>
 </div>
 
 <div class="card">
-<h3>SNU Professors</h3>
+<h3>SNU Faculty</h3>
 <p>Seoul National University</p>
-<p>Structural engineering</p>
+<p>
+Advanced structural engineering and materials research.
+</p>
 </div>
 
 </div>
 </section>
 
-<!-- 멤버 -->
+<!-- 연구진 -->
 <section class="reveal">
-<h2>Members</h2>
+<h2>Research Teams</h2>
 
 <div class="cards">
 
@@ -91,8 +101,7 @@
 
 <script>
 window.addEventListener('scroll', function() {
-    const reveals = document.querySelectorAll('.reveal');
-    reveals.forEach(el => {
+    document.querySelectorAll('.reveal').forEach(el=>{
         if(el.getBoundingClientRect().top < window.innerHeight - 100){
             el.classList.add('active');
         }
