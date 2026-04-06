@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <title>Seminar</title>
@@ -22,15 +22,27 @@
 <a href="./members.html">Members</a>
 <a href="./seminar.html">Seminar</a>
 <a href="./publications.html">Publications</a>
+<a href="./cv.html" class="cv-btn">CV</a>
 </div>
 </nav>
 
-<section>
-<h2>Seminar</h2>
+<section class="reveal">
+<h2>Seminar & Exchange</h2>
 
 <p>Graduate Seminar (Korea–Norway Collaboration)</p>
+<p>Academic Exchange Program (Oslo Metropolitan University)</p>
 
 </section>
+
+<script>
+window.addEventListener('scroll', function() {
+    document.querySelectorAll('.reveal').forEach(el=>{
+        if(el.getBoundingClientRect().top < window.innerHeight - 100){
+            el.classList.add('active');
+        }
+    });
+});
+</script>
 
 </body>
 </html>
