@@ -13,7 +13,8 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 15px;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(8px);
     z-index: 1000;
 }
 
@@ -24,25 +25,44 @@ nav {
 
 .logo img {
     height: 45px;
-    display: block;
 }
 
+/* 메뉴 */
 .menu {
     display: flex;
-    gap: 30px;
+    gap: 35px;
 }
 
 .menu a {
     color: white;
     text-decoration: none;
     font-weight: 500;
+    position: relative;
+    transition: 0.3s;
 }
 
-.menu a:hover {
-    color: #00c3ff;
+/* 🔥 hover 밑줄 애니메이션 */
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #00c3ff;
+    transition: 0.3s;
 }
 
-/* 배경 */
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* 🔥 클릭 애니메이션 */
+.menu a:active {
+    transform: scale(0.95);
+}
+
+/* HERO */
 .hero {
     height: 100vh;
     background: url('./hero.png') center/cover no-repeat;
@@ -56,19 +76,14 @@ nav {
     padding: 40px;
     border-radius: 12px;
     text-align: center;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .overlay h1 {
     font-size: 40px;
 }
 
-/* 섹션 */
-section {
-    padding: 120px 20px 80px;
-    text-align: center;
-}
-
-/* 카드 */
+/* 🔥 카드 */
 .cards {
     display: flex;
     justify-content: center;
@@ -85,11 +100,25 @@ section {
     transition: 0.3s;
 }
 
+/* 🔥 카드 hover */
 .card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px) scale(1.02);
 }
 
-.card img {
-    width: 100%;
-    border-radius: 10px;
+/* 섹션 */
+section {
+    padding: 120px 20px 80px;
+    text-align: center;
+}
+
+/* 🔥 fade 애니메이션 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
