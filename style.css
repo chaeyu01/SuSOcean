@@ -1,3 +1,36 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* 네비 */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* 🔥 핵심 배경 */
+.hero {
+    height: 100vh;
+    background: url('./hero.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 텍스트 */
 .overlay {
     text-align: center;
     color: black;
@@ -8,5 +41,4 @@
 
 .overlay h1 {
     font-size: 50px;
-    margin: 0;
 }
