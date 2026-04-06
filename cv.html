@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Professor CV</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+<div class="logo">
+<a href="./index.html">
+<img src="./logo.png">
+</a>
+</div>
+
+<div class="menu">
+<a href="./index.html">Home</a>
+<a href="./about.html">About</a>
+<a href="./research.html">Research</a>
+<a href="./members.html">Members</a>
+<a href="./seminar.html">Seminar</a>
+<a href="./publications.html">Publications</a>
+<a href="./cv.html">Professor CV</a>
+</div>
+</nav>
+
+<section class="reveal">
+
+<h2>Professor CV</h2>
+
+<img src="./professor.jpg" style="width:200px; border-radius:10px;">
+
+<h3>Min Ook Kim</h3>
+
+<p><b>Affiliation:</b> Seoul National University of Science and Technology</p>
+
+<p><b>Education:</b></p>
+<p>Ph.D. in Civil Engineering</p>
+
+<p><b>Research Areas:</b></p>
+<p>
+- Eco-friendly composite materials<br>
+- FRP structures<br>
+- Concrete durability<br>
+- Marine infrastructure
+</p>
+
+<p><b>Projects:</b></p>
+<p>
+- SuSOcean International Project<br>
+- Sustainable Infrastructure Research
+</p>
+
+</section>
+
+<script>
+window.addEventListener('scroll', function() {
+    const reveals = document.querySelectorAll('.reveal');
+    reveals.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        if(elementTop < windowHeight - 100){
+            el.classList.add('active');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
