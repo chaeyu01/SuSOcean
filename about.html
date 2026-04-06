@@ -8,26 +8,48 @@
 
 <body>
 
-(위 nav 붙여넣기)
+<nav>
+<div class="logo">
+<a href="./index.html">
+<img src="./logo.png">
+</a>
+</div>
 
-<section>
+<div class="menu">
+<a href="./index.html">Home</a>
+<a href="./about.html">About</a>
+<a href="./research.html">Research</a>
+<a href="./members.html">Members</a>
+<a href="./seminar.html">Seminar</a>
+<a href="./publications.html">Publications</a>
+<a href="./cv.html" class="cv-btn">CV</a>
+</div>
+</nav>
+
+<section class="reveal">
 <h2>About</h2>
 
 <p>
-SuSOcean is an international collaborative research project between Korea and Norway.
+SuSOcean is a Korea–Norway collaborative research project 
+focused on smart ocean structures and sustainable engineering.
 </p>
 
 <p>
-The project focuses on smart ocean infrastructure, sustainable materials, 
-and advanced engineering technologies.
-</p>
-
-<p>
-Duration: 2025–2028  
-Countries: Korea, Norway
+This project integrates international collaboration, research, 
+and advanced materials development.
 </p>
 
 </section>
+
+<script>
+window.addEventListener('scroll', function() {
+    document.querySelectorAll('.reveal').forEach(el=>{
+        if(el.getBoundingClientRect().top < window.innerHeight - 100){
+            el.classList.add('active');
+        }
+    });
+});
+</script>
 
 </body>
 </html>
