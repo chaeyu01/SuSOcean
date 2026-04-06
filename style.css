@@ -14,7 +14,6 @@ nav {
     align-items: center;
     padding: 15px;
     background: rgba(0,0,0,0.8);
-    backdrop-filter: blur(6px);
     z-index: 1000;
 }
 
@@ -25,6 +24,7 @@ nav {
 
 .logo img {
     height: 45px;
+    display: block;
 }
 
 .menu {
@@ -42,7 +42,7 @@ nav {
     color: #00c3ff;
 }
 
-/* HERO */
+/* 배경 */
 .hero {
     height: 100vh;
     background: url('./hero.png') center/cover no-repeat;
@@ -92,14 +92,4 @@ section {
 .card img {
     width: 100%;
     border-radius: 10px;
-}
-
-/* 기관 로고 */
-.partners {
-    margin-top: 40px;
-}
-
-.partners img {
-    height: 50px;
-    margin: 10px 20px;
 }
