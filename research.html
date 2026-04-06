@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <title>Research</title>
@@ -22,32 +22,43 @@
 <a href="./members.html">Members</a>
 <a href="./seminar.html">Seminar</a>
 <a href="./publications.html">Publications</a>
+<a href="./cv.html" class="cv-btn">CV</a>
 </div>
 </nav>
 
-<section>
+<section class="reveal">
 <h2>Research</h2>
 
 <div class="cards">
 
 <div class="card">
 <h3>Ocean Structures</h3>
-<p>Marine infrastructure design</p>
+<p>Marine infrastructure design and analysis</p>
 </div>
 
 <div class="card">
 <h3>Sustainable Materials</h3>
-<p>Eco-friendly composites</p>
+<p>Eco-friendly composite materials</p>
 </div>
 
 <div class="card">
-<h3>Monitoring</h3>
-<p>Sensor-based systems</p>
+<h3>Monitoring Systems</h3>
+<p>Sensor-based structural monitoring</p>
 </div>
 
 </div>
 
 </section>
+
+<script>
+window.addEventListener('scroll', function() {
+    document.querySelectorAll('.reveal').forEach(el=>{
+        if(el.getBoundingClientRect().top < window.innerHeight - 100){
+            el.classList.add('active');
+        }
+    });
+});
+</script>
 
 </body>
 </html>
