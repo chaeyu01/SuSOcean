@@ -102,12 +102,11 @@ Advanced structural engineering and materials research.
 <script>
 function revealCheck() {
     document.querySelectorAll('.reveal').forEach(el => {
-        if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+        if (el.getBoundingClientRect().top < window.innerHeight) {
             el.classList.add('active');
         }
     });
 }
-
 window.addEventListener('scroll', revealCheck);
 revealCheck();
 </script>
