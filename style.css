@@ -114,6 +114,12 @@ section {
     overflow:hidden;
 }
 
+/*Wide-card*/
+.wide-card {
+    width: 700px;
+    text-align: left;
+}
+
 .card:hover {
     transform:translateY(-8px);
 }
