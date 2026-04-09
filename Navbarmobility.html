@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Nav bar mobility</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<nav>
+<div class="logo">
+<a href="./index.html">
+<img src="./logo.png">
+</a>
+</div>
+
+<div class="menu">
+<a href="./index.html">Home</a>
+<a href="./about.html">About</a>
+<a href="./research.html">Research</a>
+<a href="./participants.html">Participants</a>
+<a href="./seminar.html">Seminar</a>
+<a href="./publications.html">Publications</a>
+<a href="./Navbarmobility.html">Nav bar mobility</a>
+<a href="./cv.html" class="cv-btn">CV</a>
+</div>
+</nav>
+
+<section class="reveal">
+<h2>(empty)</h2>
+
+<p>(empty)</p>
+<p>(empty)</p>
+
+</section>
+
+<script>
+function revealCheck() {
+    document.querySelectorAll('.reveal').forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight) {
+            el.classList.add('active');
+        }
+    });
+}
+window.addEventListener('scroll', revealCheck);
+revealCheck();
+</script>
+
+</body>
+</html>
