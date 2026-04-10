@@ -123,6 +123,7 @@ section {
 
 .card:hover {
     transform:translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
 
 /* IMAGE */
@@ -173,4 +174,13 @@ section {
 /* 오른쪽 텍스트 */
 .profile-right {
     flex: 1;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card {
+    cursor: pointer;
 }
