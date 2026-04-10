@@ -152,3 +152,25 @@ section {
   border-radius: 10px;
   margin-bottom: 10px;
 }
+/* ===== 프로필 카드 레이아웃 (Mobility용) ===== */
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+    padding: 30px;
+}
+
+/* 왼쪽 사진 */
+.profile-left img {
+    width: 160px;
+    height: auto;          /* 비율 유지 (안 잘림) */
+    border-radius: 10px;   /* 네모 */
+    object-fit: contain;   /* 절대 안 잘림 */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* 오른쪽 텍스트 */
+.profile-right {
+    flex: 1;
+}
