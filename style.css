@@ -95,13 +95,16 @@ section {
     gap:25px;
     flex-wrap:wrap;
 }
-/* a 태그 레이아웃 영향 제거 */
+/* a 태그 레이아웃 영향 제거 + 색상 초기화 */
 .cards a {
     display: contents;
 }
+.cards a * {
+    color: #222;
+}
 /* CARD */
 .card {
-    width:280px;
+    width: 500px;
     padding:20px;
     border-radius:14px;
     background:white;
@@ -136,3 +139,36 @@ section {
 .reveal.active {
     opacity:1;
     transform:translateY(0);
+}
+.member-img {
+  width: 150px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+/* ===== 프로필 카드 레이아웃 (Mobility용) ===== */
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+    padding: 30px;
+}
+/* 왼쪽 사진 */
+.profile-left img {
+    width: 160px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: contain;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+/* 오른쪽 텍스트 */
+.profile-right {
+    flex: 1;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.card {
+    cursor: pointer;
+}
